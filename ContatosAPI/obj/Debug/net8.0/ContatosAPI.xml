@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ContatosAPI</name>
+    </assembly>
+    <members>
+        <member name="M:ContatosAPI.Controllers.ContactController.CreateContact(ContatosAPI.Data.DTOs.ContactDTO)">
+            <summary>
+            Adiciona um contato ao banco de dados
+            </summary>
+            <param name="contactDTO">Objeto com os campos necessários para criação de um Contato</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:ContatosAPI.Controllers.ContactController.ListContacts">
+            <summary>
+            Retorna todos os Contatos do banco de dados
+            </summary>
+            <returns>IEnumerable</returns>
+            <response code="200">Caso o retorno seja feita com sucesso</response>
+        </member>
+        <member name="M:ContatosAPI.Controllers.ContactController.GetContactById(System.Int32)">
+            <summary>
+            Retorna um Contato do banco de dados especificado pelo id
+            </summary>
+            <param name="id">Número inteiro que indica o índice do usuário que você quer encontrar</param>
+            <returns>IEnumerable</returns>
+            <response code="200">Caso o retorno seja feita com sucesso</response>
+        </member>
+        <member name="M:ContatosAPI.Controllers.ContactController.UpdateContact(System.Int32,ContatosAPI.Data.DTOs.ContactDTO)">
+            <summary>
+            Atualiza um Contato do banco de dados
+            </summary>
+            <param name="id">Número inteiro que indica o índice do usuário que você quer atualizar</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso a atualização seja feita com sucesso</response>
+        </member>
+        <member name="M:ContatosAPI.Controllers.ContactController.UpdateContactPartially(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{ContatosAPI.Data.DTOs.ContactDTO})">
+            <summary>
+            Atualiza parcialmente um Contato do banco de dados
+            </summary>
+            <param name="id">Número inteiro que indica o índice do usuário que você quer atualizar</param>
+            <param name="patch">Objeto contendo as alterações a serem aplicadas</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso a atualização seja feita com sucesso</response>
+        </member>
+        <member name="M:ContatosAPI.Controllers.ContactController.DeleteContact(System.Int32)">
+            <summary>
+            Deleta um Contato do banco de dados
+            </summary>
+            <param name="id">Número inteiro que indica o índice do usuário que você quer deletar</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso a exclusão seja feita com sucesso</response>
+        </member>
+        <member name="T:ContatosAPI.Migrations.CreatingContactTable">
+            <inheritdoc />
+        </member>
+        <member name="M:ContatosAPI.Migrations.CreatingContactTable.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ContatosAPI.Migrations.CreatingContactTable.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ContatosAPI.Migrations.CreatingContactTable.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
